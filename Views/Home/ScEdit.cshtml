@@ -1,0 +1,23 @@
+@model DayAndEmployeeIds
+
+<h2>Personel Çalışağı Günü Belirle</h2>
+<hr>
+
+<form asp-controller="Home" asp-action="ScEdit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="dayId" class="form-label">Çalışacağı Gün</label>
+        <select asp-for="dayId" asp-items="ViewBag.Schedules" class="form-select">
+            <option value="">Seçiniz</option>
+        </select>
+        <span asp-validation-for="dayId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="employeId" class="form-label">İşçi</label>
+        <select asp-for="employeId" asp-items="ViewBag.Employees" class="form-select">
+            <option value="">Seçiniz</option>
+        </select>
+        <span asp-validation-for="employeId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>

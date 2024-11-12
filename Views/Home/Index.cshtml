@@ -1,0 +1,33 @@
+﻿@model List<Employee>
+
+    <div>
+        <h1>İşçiler</h1>
+        <table class="styled-table">
+            <thead>
+                <th width="100px">EmployeeId</th>
+                <th width="100px">FirstName</th>
+                <th width="100px">LastName</th>
+                <th width="100px">Department</th>
+                <th width="100px">Position</th>
+                <th width="100px">CreatedDate</th>
+                <th width="100px"></th>
+                <th width="100px"></th>
+            </thead>
+            <tbody>
+                @foreach(var employee in Model)
+                {
+                <tr>
+                    <td width="100px">@employee.Id</td>
+                    <td width="100px">@employee.FirstName</td>
+                    <td width="100px">@employee.LastName</td>
+                    <td width="100px">@employee.Department</td>
+                    <td width="100px">@employee.Position</td>
+                    <td width="100px">@employee.CreatedAt</td>
+                    <td width="100px"><a href="/Home/Edit/@employee.Id">Edit</a></td>
+                    <td width="100px"><a href="/Home/Delete/@employee.Id">Delete</a></td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>

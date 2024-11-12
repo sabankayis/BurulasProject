@@ -1,0 +1,78 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Tablo genel stil */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık satırına stil ekleme */
+.styled-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Tablo hücrelerine stil ekleme */
+.styled-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Satırlar arasında renk alternatifi (zebra efekti) */
+.styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover efekti (fare ile üzerine gelince renk değişir) */
+.styled-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Tablo kenarlıklarını belirleme */
+.styled-table th, .styled-table td {
+  border: 1px solid #ddd;
+}
+
+/* Tabloyu ortalamak */
+.styled-table {
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+a{
+  color: red;
+}
+.ucNokta{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 44px;
+}

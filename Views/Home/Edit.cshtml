@@ -1,0 +1,42 @@
+@model Employee
+
+<h2>Personel Düzenle</h2>
+<hr>
+
+<form asp-controller="Home" asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label"></label>
+        <input asp-for="FirstName" class="form-control">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Department" class="form-label"></label>
+        <input asp-for="Department" class="form-control">
+        <span asp-validation-for="Department" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Position" class="form-label"></label>
+        <input asp-for="Position" class="form-control">
+        <span asp-validation-for="Position" class="text-danger"></span>
+    </div>
+    
+    <!-- <div class="mb-3">
+        <label asp-for="DayOfWeek" class="form-label">Çalışacağı Gün</label>
+        <select asp-for="DayOfWeek" asp-items="ViewBag.Schedules" class="form-select">
+            <option value="">Seçiniz</option>
+        </select>
+        <span asp-validation-for="ScheduleId" class="text-danger"></span>
+    </div> -->
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>

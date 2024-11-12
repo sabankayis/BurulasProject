@@ -1,0 +1,10 @@
+@model Employee
+<h2>Personel Sil</h2>
+<hr>
+
+<form asp-controller="Home" asp-action="Delete" method="post">
+@Model.FirstName @Model.LastName kayıt silinsin mi ?
+    <input type="hidden" asp-for="@Model.Id">
+    <button type="button" class="btn btn-secondary"><a href="/Home/ScIndex">Hayır</a></button>
+    <button type="submit" class="btn btn-secondary">Evet</button>
+</form>

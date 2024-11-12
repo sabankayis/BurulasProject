@@ -1,0 +1,99 @@
+@model List<Schedule>
+    <div>
+        <h1>Çizelge</h1>
+        <table class="styled-table">
+            <thead>
+                <th width="150px">Pazartesi</th>
+                <th width="150px">Salı</th>
+                <th width="150px">Çarşamba</th>
+                <th width="150px">Perşembe</th>
+                <th width="150px">Cuma</th>
+                <th width="150px">Cumartesi</th>
+                <th width="150px">Pazar</th>
+                <th width="150px"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Pazartesi)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                            @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a> <br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Sali)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a><br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px"> 
+                        @foreach (var schedule in ViewBag.Carsamba)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a> <br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Persembe)
+                        {
+                        <div style="display: flex;">
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span><p class="">@employee.LastName</p>  <a href="/Home/ScDelete/@employee.Id">X</a><br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Cuma)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a> <br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Cumartesi)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a> <br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    <td width="200px">
+                        @foreach (var schedule in ViewBag.Pazar)
+                        {
+                        <div>
+                            @foreach (var employee in schedule.Employees)
+                            {
+                                @employee.FirstName <span></span> @employee.LastName <a href="/Home/ScDelete/@employee.Id">X</a> <br>
+                            }
+                        </div>
+                        }
+                    </td>
+                    
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
